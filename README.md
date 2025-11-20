@@ -1,1 +1,2 @@
 # stat656-final-proj
+This is the github repo for our final project for STAT656 at Purdue University. In this project, we perform a Bayesian analysis of NBA game data to determine how home court advantage and first-two-quarter scoring efficiency affect win probability.
