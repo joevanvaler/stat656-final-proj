@@ -9,7 +9,7 @@ names(data)
 
 # initial cleanup; filter for correct years
 data_filtered <- data %>%
-  mutate(date = as.Date(game_date.x)) %>%
+  mutate(date = as.Date(game_date)) %>%
   filter(
     year(date) >= 2014,
     month(date) >= 7,
