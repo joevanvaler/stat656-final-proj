@@ -10,32 +10,12 @@ library(loo)
 options(mc.cores = parallel::detectCores())
 
 
-
+# replace with your working directory
 setwd("C:/Michel/00_PhD/04_Fall_2025/Bayes/Project/Project/stat656-final-proj-main/stat656-final-proj-main")
 
 # read in data
-data <- read.csv('game_gameinfo_gamesummary_linescore.csv')
 dataw <- read.csv('game_gameinfo_gamesummary_linescore_filtered.csv')
 
-
-# initial checks
-head(data)
-names(data)
-
-# initial cleanup; filter for correct years
-data_filtered <- data %>%
-  mutate(date = as.Date(game_date)) %>%
-  filter(
-    year(date) >= 2014,
-    month(date) >= 7,
-    season_type == "Regular Season"
-  )
-
-View(data_filtered)
-# 4299 games
-nrow(data_filtered)
-
-table(data_filtered[, "season_id"])
 table(dataw[, "season_id"])
 
 data_filtered = dataw
